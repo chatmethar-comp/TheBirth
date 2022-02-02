@@ -104,10 +104,11 @@ def whoBornIn(day=-1, weekday=-1, month=-1, year=-1):
         yearList = [person["name"] for person in rawData if int(person["year"]) == year]
     Set = [item for item in (dayList,weekdayList,monthList,yearList) if item != -1]
     def sameElement(list1, list2):
+        result = []
         for item in list1:
-            if item not in list2:
-                list1.remove(item)
-        return list1
+            if item in list2:
+                result.append(item)
+        return result
 
     if len(Set) == 1:
         return Set[0]
@@ -115,6 +116,8 @@ def whoBornIn(day=-1, weekday=-1, month=-1, year=-1):
         return sameElement(Set[0], Set[1])
     elif len(Set) == 3:
         return sameElement(Set[0], sameElement(Set[1], Set[2]))
+    elif len(Set) == 4:
+        return sameElement(sameElement(Set[0],Set[1]), sameElement(Set[2], Set[3]))
 
 def timeLived(name:str):
     name = name.capitalize()
@@ -193,7 +196,7 @@ def whoInZodiac(zodiac:str):
     zodiac = zodiac.capitalize()
     result = []
     for person in rawData:
-        if iszodiac(person["name"]) == zodiac:
+        if isZodiac(person["name"]) == zodiac:
             result.append(person["name"])
     return result
 

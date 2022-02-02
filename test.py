@@ -17,4 +17,6 @@ import datetime
 # print(datetime.datetime(2022, 2, 6).weekday())
 # print(TheBirth.whoBornIn(month="Mar"))
 # print(TheBirth.countdowntobirth(""))
-print(TheBirth.checkDate(50))
+# print(TheBirth.checkDate(50))
+# print(TheBirth.whoBornIn(year=2006, month="apr", day=22, weekday="sat"))
+print(TheBirth.whoBornIn(day=17, weekday="wed"))
