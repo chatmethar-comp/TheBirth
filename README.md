@@ -38,7 +38,7 @@ Then the result will tell how many days this person has been on earth.
 
 for example, if today is Poom's 2th Birthday, the function will return 730 (365*2 days)
 
-## Want to check how many days this person was born, is it true?
+## how many days this person was born, is it true?
 We can use ***checkDate***
 Then result will show person who have days that equal input.
 
@@ -69,7 +69,7 @@ The result will show all person who is in this zodiac.
 - year : interger 1998, 2006, 1970
 - any string input is accepted for sensitive case (uppercase, lowercase, capitalized)
 
-# developer
+# developers
 - Pear
 - Mangkorn
 - J
